@@ -3,7 +3,18 @@
   "description": "Base Level Extension",
   "manifest_version": 3,
   "version": "1.0",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "tabs"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./content.js"],
+      "all_frames": false,
+      "run_at": "document_end"
+    }
+  ],
   "action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"
