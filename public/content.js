@@ -1,8 +1,6 @@
 /*global chrome*/
 const messagesFromAppListener = (message, sender, response) => {
   console.log('[content.js]. Message received', {message, sender});
-  console.log(chrome.runtime.id);
-  console.log(sender.id);
 
   if (sender.id === chrome.runtime.id && message.message === 'Hello from React') {
     const title = document.querySelector('h1');
