@@ -9,6 +9,8 @@ import './App.css';
 
 import Home from './components/Home'
 import About from './components/About'
+import Shop from './components/Shop'
+import QnA from './components/QnA'
 
 function App() {
   useEffect(() => {
@@ -24,8 +26,10 @@ function App() {
   return (
     <div className='App'>
       <nav>
-        <Link component={Home}>Home</Link>
-        <Link component={About}>About</Link>
+        <Link component={Home}>Home</Link> | 
+        <Link component={About}>About</Link> | 
+        <Link component={Shop}>About</Link> | 
+        <Link component={QnA} props={{ message: 'From HomePage' }}>Q&A</Link>
       </nav>
       <Router>
         <Home />
