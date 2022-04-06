@@ -3,7 +3,7 @@
 import './App.css';
 import React from 'react';
 import Home from './pages/Home';
-import About from './pages/About';
+// import About from './pages/About';
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
